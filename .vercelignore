@@ -1,0 +1,4 @@
+data/
+tests/
+scripts/test-pg.sh
+node_modules/

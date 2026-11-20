@@ -1,0 +1,22 @@
+{
+  "name": "jemputmakan",
+  "version": "2.0.0",
+  "description": "JemputMakan: web pre-order dan self-pickup untuk konsumsi berkelanjutan di lingkungan kampus (Node + Supabase/PostgreSQL, deploy ke Vercel)",
+  "type": "module",
+  "private": true,
+  "engines": { "node": ">=22.5" },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning server.js",
+    "dev": "node --disable-warning=ExperimentalWarning --watch server.js",
+    "build": "node scripts/build-assets.mjs",
+    "seed": "node --disable-warning=ExperimentalWarning src/seed.js --reset",
+    "db:sql": "node scripts/gen-migration.mjs",
+    "db:migrate": "node scripts/migrate.mjs",
+    "test": "node --disable-warning=ExperimentalWarning --test \"tests/**/*.test.js\"",
+    "test:pg": "sh scripts/test-pg.sh",
+    "measure": "node --disable-warning=ExperimentalWarning scripts/measure.mjs"
+  },
+  "dependencies": {
+    "pg": "^8.13.1"
+  }
+}
